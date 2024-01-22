@@ -33,3 +33,9 @@ executed. If "success" is "false", an error is created, and te promise is reject
 triggering the code inside the ".catch()" block. This way, you can handle both 
 successful and error scenarious within the "myFunction"
  */
+
+/*testing to see if a function below .then and .catch will work
+    -edit: it DOES work */
+const testFunc = () => {
+  console.log("test passed");
+};
