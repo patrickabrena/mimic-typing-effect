@@ -70,10 +70,25 @@ button {
   margin: 3%;
 }
 .response-field {
-  width: 5%;
-  padding: 5%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  padding: 7%;
+  box-sizing: border-box;
   border: solid 1px white;
 }
+#typing-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  color: antiquewhite;
+}
+
 a {
   font-family: "Pixelify Sans";
   text-decoration: none;

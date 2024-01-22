@@ -185,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("Code to be executed after repeatForLoop is done");
           setTimeout(() => {
             console.log("delayed execution response");
+            mimicTypingEffect();
           }, 1000);
         })
         .catch((error) => {
@@ -206,5 +207,42 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   img_looping_effect5(); // Call the function to set up the event handler
+  //
+  //
+  //
+  /*displaying Array with For Loop */
+  const mimicTypingEffect = () => {
+    const outputMessages = {
+      win: "YOU WIN",
+      lose: "YOU LOSE",
+    };
+    const { win, lose } = outputMessages;
+
+    const messageToDisplay = win; // Change this to 'lose' if needed
+    const typingContainer = document.getElementById("typing-container");
+
+    const typeMessage = (message, index) => {
+      if (index < message.length) {
+        typingContainer.textContent = message.substring(0, index + 1);
+        /*
+        1. "typingCOntainer": This is a variable that holds a reference to an HTML
+            element. Assumed that there is an HTML element with the id="typing-container"
+        2. ".textContent": is a property of an HTML element that represents the text 
+            content of the element. By setting this property, you can change the text content 
+            displayed within the element
+        3. "message": string that contains the entire message that you want to display 
+            in my case, it's "YOU WIN" or "YOU LOSE"  
+        4. ".substring(0, index + 1)": Method that extracts a portions of the "message" string
+            It takes two params: the starting index(0 in this case) and the ending 
+            index("index + 1"). As the "index" increases in each iteration, this line of code
+            extracts an increasing portion of the "message" string  */
+        setTimeout(() => {
+          typeMessage(message, index + 1);
+        }, 100); // Adjust the timeout to control typing speed
+      }
+    };
+
+    typeMessage(messageToDisplay, 0);
+  };
 });
 /*Test Code 7 */
