@@ -138,6 +138,18 @@ document.addEventListener("DOMContentLoaded", function () {
       if (index < message.length) {
         typingContainer.textContent = text.substring(0, index + 1);
         /*
+        const originalString = "Hello, World!";
+        const substring1 = originalString.substring(0, 5); // Extracts "Hello"
+        const substring2 = originalString.substring(7);    // Extracts "World!"
+        const substring3 = originalString.substring(7, 12); // Extracts "World
+
+        In the examples above:
+
+        substring1 extracts characters from index 0 to 4 (inclusive), resulting in "Hello".
+        substring2 extracts characters from index 7 to the end of the string, resulting in "World!".
+        substring3 extracts characters from index 7 to 11 (inclusive), resulting in "World".
+
+
          */
         setTimeout(() => {
           typeMessage(text, index + 1);
